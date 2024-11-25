@@ -1,10 +1,10 @@
 import { Section } from './Section';
 import { cn } from '@/lib/utils';
-import { TailwindcssIcon } from './icons/Tailwindcss.tsx';
+import { TailwindcssIcon } from './icons/Tailwindcss';
 import { CplusplusIcon } from './icons/Cplusplus';
 import { Cicon } from './icons/C';
-import { EpitechIcon } from './icons/EpitechIcon';
 import Link from 'next/link';
+import { ComponentPropsWithoutRef } from 'react';
 
 const Code = ({className,...props}: ComponentPropsWithoutRef<"span">) => {
     return <span className={cn("bg-accent/30 font-mono border border-accent hover:bg-accent/50 p-1 py-0.5 rounded-sm text-primary",className)} {...props} />

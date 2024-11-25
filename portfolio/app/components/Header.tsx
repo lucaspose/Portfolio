@@ -4,7 +4,6 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { Githubicon } from './icons/Githubicon';
 import { FaInstagram } from "react-icons/fa";
-import { InstaIcon } from './icons/InstaIcon';
 import { LinkedinIcon } from './icons/LinkedInIcon';
 
 export const Header = () => {

@@ -1,6 +1,6 @@
 import { Section } from './Section';
 import { Card } from '@/components/ui/card';
-import { Home, ArrowUpRight, ArrowUpCircleIcon } from "lucide-react";
+import { ArrowUpRight, ArrowUpCircleIcon, LucideIcon } from "lucide-react";
 import Link from 'next/link';
 
 export const Status = () => {
@@ -65,17 +65,20 @@ const SIDE_PROJECTS: SideProjectProps[] = [
     {
         Logo: Terminal,
         title: "Project my_printf",
-        description: "Recode the printf function."
+        description: "Recode the printf function.",
+        url: "/"
     },
     {
         Logo: Terminal,
         title: "Project 101pong",
-        description: "Simulation of a 3D pong game."
+        description: "Simulation of a 3D pong game.",
+        url: "/"
     },
     {
         Logo: Terminal,
         title: "Project myls",
-        description: "Recode the ls function."
+        description: "Recode the ls function.",
+        url: "/"
     },
 ];
 
@@ -83,6 +86,7 @@ type SideProjectProps = {
     Logo: LucideIcon;
     title: string;
     description: string;
+    url: string;
 }
 
 const SideProject = (props: SideProjectProps) => {
@@ -111,7 +115,7 @@ const ContactCard = (props: {
         <Card className="p-3 bg-accent/10 hover:bg-accent/30 transition-colors flex items-center gap-4 group">
             <div className="relative">
                 <img src={props.image} alt={props.name} className="w-10 h-10 rounded-full object-contain" />
-                <img src={props.mediumImage} alt={props.name} className="h-4 w-4 -bottom-1 -right-1 absolute bottom-0 right-0 rounded-sm" />
+                <img src={props.mediumImage} alt={props.name} className="h-4 w-4 -bottom-1 -right-1 absolute rounded-sm" />
             </div>
             <div className="mr-auto">
                 <div className="flex items-center gap-2">

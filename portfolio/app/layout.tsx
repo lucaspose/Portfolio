@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { cn } from "@/lib/utils";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
 import { Anek_Telugu } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
