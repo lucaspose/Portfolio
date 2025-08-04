@@ -1,47 +1,30 @@
-import type { Metadata } from "next";
-import { cn } from "@/lib/utils";
-import { Anek_Telugu } from "next/font/google";
-import localFont from "next/font/local";
-import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-const AnekTelugu = Anek_Telugu({ 
-  subsets: ["latin"], 
-  variable: "--font-caption",
-});
+import type { Metadata } from 'next'
+import { GeistSans } from 'geist/font/sans'
+import { GeistMono } from 'geist/font/mono'
+import './globals.css'
 
 export const metadata: Metadata = {
-  title: "Lucas POSE • Fullstack Developer",
-  description: "Application developer, fullstack developer, Web Designer, and software engineer.",
-};
+  title: 'Lucas POSE – Développeur Web & Mobile Freelance | Création de Sites & Applications sur Mesure',
+  description: 'Lucas POSE, développeur freelance passionné, je crée des expériences web et mobiles uniques, performantes et sur mesure. De la landing page au back-end complexe, j’accompagne vos projets digitaux avec rigueur, créativité et expertise technique.',
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="h-full">
-      <body
-        className={cn(
-          geistSans.variable, 
-          geistMono.variable,
-          AnekTelugu.variable, 
-          "font-sans h-full bg-background text-foreground"
-        )}
-      >
-        {children}
-      </body>
+    <html lang="en">
+      <head>
+        <style>{`
+html {
+  font-family: ${GeistSans.style.fontFamily};
+  --font-sans: ${GeistSans.variable};
+  --font-mono: ${GeistMono.variable};
+}
+        `}</style>
+      </head>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
